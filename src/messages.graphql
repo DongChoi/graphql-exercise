@@ -1,0 +1,19 @@
+query getUserMessages($username: ID!){
+user(username: $username){
+    messages {
+    body
+    }
+}
+}
+
+
+mutation CreateMessage($username: ID!, $body: String!){
+createMessage(username: $username, body: $body)
+{
+    id
+    body
+    user {
+    username
+    }
+}
+}

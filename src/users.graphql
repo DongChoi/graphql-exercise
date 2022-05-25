@@ -1,0 +1,17 @@
+mutation CreateUser($username: ID!, $first_name: String!, $last_name: String!){
+    createUser(username: $username, first_name: $first_name, last_name: $last_name)
+    {
+        username
+        first_name
+        last_name
+    }
+}
+
+
+query getAllUsers{
+    users {
+        username
+        first_name
+        last_name
+    }
+}
